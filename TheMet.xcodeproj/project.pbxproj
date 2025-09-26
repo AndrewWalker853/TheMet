@@ -17,7 +17,8 @@
 		CDDCFFC52939C8290022CE9A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC42939C8290022CE9A /* ColorExtension.swift */; };
 		CDDCFFC72939C83B0022CE9A /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC62939C83B0022CE9A /* ObjectView.swift */; };
 		CDDCFFC92939C8500022CE9A /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFC82939C8500022CE9A /* SafariView.swift */; };
-		CDDCFFCB2939C8910022CE9A /* MetStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDCFFCA2939C8910022CE9A /* MetStoreDevData.swift */; };
+		E7B1F1772E8692E90099A682 /* TheMetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B1F1762E8692E90099A682 /* TheMetService.swift */; };
+		E7B1F1792E8694D30099A682 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B1F1782E8694D30099A682 /* URLComponentsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,8 @@
 		CDDCFFC42939C8290022CE9A /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		CDDCFFC62939C83B0022CE9A /* ObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
 		CDDCFFC82939C8500022CE9A /* SafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
-		CDDCFFCA2939C8910022CE9A /* MetStoreDevData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetStoreDevData.swift; sourceTree = "<group>"; };
+		E7B1F1762E8692E90099A682 /* TheMetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMetService.swift; sourceTree = "<group>"; };
+		E7B1F1782E8694D30099A682 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,8 @@
 		18D775BF22AD944300AE281E /* TheMet */ = {
 			isa = PBXGroup;
 			children = (
+				E7B1F1782E8694D30099A682 /* URLComponentsExtension.swift */,
+				E7B1F1762E8692E90099A682 /* TheMetService.swift */,
 				1839F4AF25190F2A00BB00F1 /* TheMetApp.swift */,
 				18D775C422AD944300AE281E /* ContentView.swift */,
 				CDDCFFC62939C83B0022CE9A /* ObjectView.swift */,
@@ -86,7 +90,6 @@
 		18D775C822AD944400AE281E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				CDDCFFCA2939C8910022CE9A /* MetStoreDevData.swift */,
 				18D775C922AD944400AE281E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -188,11 +191,12 @@
 			files = (
 				CDDCFFC12939C7930022CE9A /* TheMetStore.swift in Sources */,
 				CDDCFFC72939C83B0022CE9A /* ObjectView.swift in Sources */,
+				E7B1F1792E8694D30099A682 /* URLComponentsExtension.swift in Sources */,
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 				CDDCFFC32939C7A90022CE9A /* Object.swift in Sources */,
-				CDDCFFCB2939C8910022CE9A /* MetStoreDevData.swift in Sources */,
 				1839F4B025190F2A00BB00F1 /* TheMetApp.swift in Sources */,
 				CDDCFFC52939C8290022CE9A /* ColorExtension.swift in Sources */,
+				E7B1F1772E8692E90099A682 /* TheMetService.swift in Sources */,
 				CDDCFFC92939C8500022CE9A /* SafariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
