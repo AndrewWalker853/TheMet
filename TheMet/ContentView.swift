@@ -1,13 +1,14 @@
 import SwiftUI
 
 struct ContentView: View {
-  @StateObject private var store = TheMetStore()
-  @State private var query = "rhino"
+  @StateObject private var store = TheMetStore(12)
+  @State private var query = "persimmon"
   @State private var showQueryField = false
   @State private var fetchObjectsTask: Task<Void, Error>?
+  @State private var path = NavigationPath()
 
   var body: some View {
-    NavigationStack {
+    NavigationStack(path: $path) {
       VStack {
         Text("You searched for '\(query)'")
           .padding(5)
@@ -65,6 +66,19 @@ struct ContentView: View {
         if store.objects.isEmpty { ProgressView() }
       }
     }
+    .onOpenURL { url in
+      if let id = url.host,
+        let object = store.objects.first(
+          where: { String($0.objectID) == id }) {  // 1
+        if object.isPublicDomain {  // 2
+          path.append(object)
+        } else {
+          if let url = URL(string: object.objectURL) {
+            path.append(url)
+          }
+        }
+      }
+    }
     .task {
       do {
         try await store.fetchObjects(for: query)
@@ -75,17 +89,4 @@ struct ContentView: View {
 
 #Preview {
   ContentView()
-}
-
-struct WebIndicatorView: View {
-  let title: String
-
-  var body: some View {
-    HStack {
-      Text(title)
-      Spacer()
-      Image(systemName: "rectangle.portrait.and.arrow.right.fill")
-        .font(.footnote)
-    }
-  }
 }
